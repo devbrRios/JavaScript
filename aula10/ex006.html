@@ -8,6 +8,7 @@
     <style>
 
         body {
+            background-color: #333;
             display: flex;
             min-height: 100vh;
             justify-content: center;
@@ -15,8 +16,8 @@
         }
 
         div#area {
-            background-color: rgb(69, 106, 107);
-            color: #fff;
+            background-color: rgb(113, 173, 175);
+            color: rgb(82, 84, 88);
             width: 200px;
             height: 200px;
             line-height: 200px;
@@ -26,15 +27,30 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()">
+    <div id="area">
         Interaja...
     </div>
 
     <script>
-        function clicar() {
-            var a = document.querySelector('#area');            
-            a.style.borderRadius = '50%';
+        var a = document.getElementById('area');
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', saiu);
 
+        function clicar() {
+            //var a = window.document.querySelector('#area')            
+            a.innerText = 'Clicou';
+            a.style.borderRadius = '50%';
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!!'
+            a.style.backgroundColor = 'orange'
+        }
+
+        function saiu() {
+            a.innerText = 'Saiu!!';
+            a.style.backgroundColor = 'rgb(113, 173, 175)';
         }
 
     </script>
