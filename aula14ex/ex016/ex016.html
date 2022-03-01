@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Super contador</title>
     <style>
         
         body {
-            background-color: rgb(49, 76, 156);
+            background-color: rgb(86, 172, 187);
             font: normal 15pt Arial;
             
         }
@@ -29,21 +29,10 @@
         }
 
         div {
-            text-align: center;
+            /*text-align: center;*/
             padding: 8px;
         }
 
-        div#msg {
-                      
-            
-        }
-
-        #imagem {
-          
-        }
-        
-
-        
 
         footer  {
             margin: 30px;
@@ -51,15 +40,22 @@
         }
     </style>
 </head>
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Hora do dia</h1>
+        <h1>Vamos contar</h1>
     </header>
 
     <section>
-        <div id="msg">Agora são 9 horas</div>
-        <div id="foto">
-            <img id="imagem" src="manha.png" alt="foto do dia">
+        <div id="dados">
+            <p>Início: <input type="number" name="inicio" id="txti"></p>
+            <p>Fim: <input type="number" name="fim" id="txtf"></p>
+            <p>Passo: <input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
+        </div>
+        
+       
+        <div id="res">
+            Preparando a contagem...
         </div>
     </section>
 
@@ -68,5 +64,6 @@
     </footer>
 
     <script src="script.js"></script>
+    
 </body>
 </html>
