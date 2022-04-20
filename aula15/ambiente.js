@@ -9,7 +9,7 @@ for (let c = 15; c >= 1; c -= 3) {
 
 console.log(`Nosso vetor é o ${num}`)
 console.log(`O tamanho do array é ${num.length}`)
-num.sort();
+num.sort(comparar);
 console.log(`O array ordenado é ${num}`)
 
 //For mais simplificado para usar em array e object
@@ -24,3 +24,7 @@ caso nao exista irá retornar '-1'
 */
 let cons = num.indexOf(10)
 console.log(`O valor 10 está na posição ${cons}`)
+
+function comparar(a,b) {
+    return a -b;
+}
